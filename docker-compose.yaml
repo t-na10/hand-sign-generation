@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+  handwriting-diffusion-local:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities:
+                - gpu
+              driver: nvidia
+              count: 2
+    volumes:
+      - .:/home
+    stdin_open: true
+    tty: true
