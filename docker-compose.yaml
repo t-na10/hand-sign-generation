@@ -1,6 +1,8 @@
 version: '3.3'
 services:
-  handwriting-diffusion-local:
+  hwd-local:
+    extra_hosts:
+      - host.docker.internal:host-gateway
     build:
       context: .
       dockerfile: Dockerfile
@@ -12,6 +14,8 @@ services:
                 - gpu
               driver: nvidia
               count: 2
+    ports:
+      - "8080:8080"
     volumes:
       - .:/home
     stdin_open: true
