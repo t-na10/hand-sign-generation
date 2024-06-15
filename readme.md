@@ -59,4 +59,3 @@ $ streamlit run app.py --server.port 8080
 ```
 
 Then, open your browser and navigate to `http://localhost:8080`.
-```
