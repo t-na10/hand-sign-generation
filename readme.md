@@ -1,21 +1,62 @@
-Code for the Paper "Diffusion Models for Handwriting Generation": https://arxiv.org/abs/2011.06704
+<div align="center">
 
-Project written in python 3.7, Tensorflow 2.3
+# Handwriting-Difusion-App
 
-To run the model, install required packages with 
-pip install -r requirements.txt 
+</div>
+An application that generates handwritten text using Diffusion Models.
 
-Then run inference.py and specify arguments as needed
+## DEMO
+![gif](img/demo.gif)
+
+by streamlit
+
+## Overview
+This application leverages TensorFlow and Streamlit to generate realistic handwritten text from user input.
+
+## Features
+- Generate handwritten text in real-time
+- Customizable handwriting styles
+- Easy-to-use interface
+
+## Requirement
+
+* Python 3.7
+* TensorFlow 2.3.0
+* Streamlit
+
+See [requirements.txt](./requirements.txt) for more information.
+
+To install the required packages for your local environment, run:
+```sh
+pip install -r requirements.txt
+```
+
+## Installation
 
 
-To retrain model, run train.py, and specify arguments to change hyperparameters
-All models will be saved in the ./weights directory
+1. **Clone the repository**
 
+    ```sh
+    $ git clone https://github.com/t-na10/handwriting-generation.git
+    $ cd handwriting-generation
+    ```
 
-Before running the training script, download the following things from 
-https://fki.tic.heia-fr.ch/databases/download-the-iam-on-line-handwriting-database
+2. **Set up Docker environment**
 
-data/lineStrokes-all.tar.gz   -   the stroke xml for the online dataset
-data/lineImages-all.tar.gz    -   the images for the offline dataset
-ascii-all.tar.gz              -   the text labels for the dataset
-extract these contents and put them in the ./data directory 
+    ```sh
+    $ docker compose up -d hwd-local
+    ```
+
+    ```sh
+    $ docker exec -it hwd-local bash
+    ```
+## Usage
+
+To run the demo, use the following command within the Docker container or your local environment:
+
+```sh
+$ streamlit run app.py --server.port 8080
+```
+
+Then, open your browser and navigate to `http://localhost:8080`.
+```
