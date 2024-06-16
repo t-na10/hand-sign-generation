@@ -2,7 +2,7 @@ import streamlit as st
 import subprocess
 import os
 
-st.title("Handwriting-Difusion-App")
+st.title("Handwriting-Diffusion-App")
 st.markdown("This app generates handwriting using the Handwriting Diffusion model.")
 textstring = st.text_input("Text to generate handwriting:")
 writersource = st.selectbox("Choose a writer source image:",
