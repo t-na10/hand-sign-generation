@@ -1,6 +1,6 @@
 <div align="center">
 
-# Handwriting-Difusion-App
+# Handwriting-Diffusion-App
 
 </div>
 An application that generates handwritten text using Diffusion Models.
